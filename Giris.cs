@@ -4,12 +4,11 @@ namespace C__Directory
 {
     static class Giris
     {
-        static public int IntKontrol(string mesaj)
+        static public int IntGiris(string mesaj)
         {
-            Console.Write(mesaj +": "); //MenuGiris metodundan geliyor
+            Console.Write(mesaj +": "); //mesaj değişkeni, MenuGiris metodundan geliyor, : mesajdan sonra ekleniyor.
             try
-            {
-                
+            {           
                 return Convert.ToInt32(Console.ReadLine());
             }
             catch(Exception)
@@ -21,17 +20,17 @@ namespace C__Directory
 
          static public bool MenuGiris()
         {
-            int input = IntKontrol("Lütfen Yapacağınız İşlemi Seçin");
-            CallOperation(input);
+            int islem = IntGiris("Lütfen Yapacağınız İşlemi Seçin"); // IntKontrol den gelen veriyi değişkene atıyor. Atamadan IntKontrol Metodunu çalıştırıyor.
+            IslemCagir(islem); //is
             return true;
         }
 
-        static private void CallOperation(int i)
+        static private void IslemCagir(int i)
         {
             switch (i)
             {
                 case 1:
-                    Console.WriteLine("Bir");
+                    Islemler.KayitOlustur();
                     break;
                 case 2:
                     Console.WriteLine("İki");
@@ -46,6 +45,12 @@ namespace C__Directory
                     Console.WriteLine("Beş");
                     break;
             }
+        }
+
+        static public string StringGiris(string mesaj) //Kayıt, sil vb işlemleri için girdi alma
+        {
+            Console.Write(mesaj+": "); //mesaj değişkeni, MenuGiris metodundan geliyor, : mesajdan sonra ekleniyor.
+            return Console.ReadLine();
         }
     }
 

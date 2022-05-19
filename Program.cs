@@ -8,10 +8,12 @@ namespace C__Directory
         {
             Menu.Mesaj();
 
-            Menu.MenuGoster();
+            Console.WriteLine("Program Başlatıldı");
 
             while(true)
             {
+                Menu.MenuGoster();
+
                 Giris.MenuGiris();
             }            
         }
