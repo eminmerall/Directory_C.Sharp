@@ -39,7 +39,7 @@ namespace C__Directory
                     Console.WriteLine("Üç");
                     break;
                 case 4:
-                    Console.WriteLine("Dört");
+                    Islemler.KayitListele();
                     break;
                 case 5:
                     Console.WriteLine("Beş");

@@ -10,7 +10,18 @@ namespace C__Directory
             string soyad = Giris.StringGiris("Soyadı");
             string numara = Giris.StringGiris("Telefon");
 
-            Console.WriteLine("\"" + ad + "\"" + ", " + "\"" + soyad + "\"" + ", " + "\"" + numara + "\"");  // /" tırnak işareti yazdırmak için kullanılır.
+            Kayitlar.Ekle(new KayitVarlik((ad, soyad, numara)));
+        }
+
+        static public void KayitListele()
+        {
+            Console.WriteLine("Kayıtlar:");
+            Console.WriteLine("Ad " + " " + " \t| Soyad " + " " + " \t| Telefon " + " ");
+            foreach (var item in Kayitlar.kayitListe)
+            {
+                //Console.WriteLine("\"" + item.Adi + "\"" + ", " + "\"" + item.Soyadi + "\"" + ", " + "\"" + item.Telefon + "\"");
+                Console.WriteLine("Adı: " + item.Adi + " \t| Soyadı: " + item.Soyadi + " \t| Telefon: " + item.Telefon);
+            }
         }
 
     }
