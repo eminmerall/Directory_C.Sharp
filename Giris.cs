@@ -4,16 +4,9 @@ namespace C__Directory
 {
     static class Giris
     {
-         static public bool MenuGiris()
-        {
-            int input = IntKontrol("Lütfen Yapacağınız İşlemi Seçin");
-            CallOperation(input);
-            return true;
-        }
-        
         static public int IntKontrol(string mesaj)
         {
-            Console.Write(mesaj +": ");
+            Console.Write(mesaj +": "); //MenuGiris metodundan geliyor
             try
             {
                 
@@ -26,11 +19,12 @@ namespace C__Directory
             }
         }
 
-        /*static public string StringGiris(string mesaj)
+         static public bool MenuGiris()
         {
-            Console.Write(mesaj +": ");
-            return Console.ReadLine();
-        }*/
+            int input = IntKontrol("Lütfen Yapacağınız İşlemi Seçin");
+            CallOperation(input);
+            return true;
+        }
 
         static private void CallOperation(int i)
         {

@@ -9,7 +9,11 @@ namespace C__Directory
             Menu.Mesaj();
 
             Menu.MenuGoster();
-            
+
+            while(true)
+            {
+                Giris.MenuGiris();
+            }            
         }
     }
 }
