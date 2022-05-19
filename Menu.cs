@@ -15,7 +15,9 @@ namespace C__Directory
         public static void MenuGoster()
         {
             Console.WriteLine("Aşağıdaki İşlemleri Yapabilirsiniz!\n"); // \n bir satır boşluk bırakır.
-            Console.WriteLine("[1] Yeni Kayıt Oluşur \n[2] Kaydı Sil \n[3] Kaydı Güncelle \n[4] Kayıtları Listele \n[5] Kayıt Ara");
+            //Console.WriteLine("[1] Yeni Kayıt Oluşur \n[2] Kaydı Sil \n[3] Kaydı Güncelle \n[4] Kayıtları Listele \n[5] Kayıt Ara");
+            Console.WriteLine("[1] Yeni Kayıt Oluşur \n[2] Kayıtları Listele \n[3] Ekranı Temizle");
+
         }
         
     }

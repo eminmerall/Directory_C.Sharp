@@ -33,16 +33,10 @@ namespace C__Directory
                     Islemler.KayitOlustur();
                     break;
                 case 2:
-                    Console.WriteLine("İki");
-                    break;
-                case 3:
-                    Console.WriteLine("Üç");
-                    break;
-                case 4:
                     Islemler.KayitListele();
                     break;
-                case 5:
-                    Console.WriteLine("Beş");
+                case 3:
+                    Console.Clear();
                     break;
             }
         }
