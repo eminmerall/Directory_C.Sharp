@@ -12,7 +12,7 @@ namespace C__Directory
 
         static public void Sil(KayitVarlik p)
         {
-            if(Giris.StringGiris($"{p.Adi} siliniyor emin misiniz? Evet = 1, Hayır = 0").ToLower() == "1")
+            if(Giris.StringGiris($"{p.Adi} siliniyor emin misiniz? Evet = 1").ToLower() == "1")
             {
                 Kayitlar.kayitListe.Remove(p);
             }

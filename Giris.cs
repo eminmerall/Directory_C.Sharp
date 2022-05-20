@@ -41,6 +41,9 @@ namespace C__Directory
                 case 4:
                     Islemler.KayitListele();
                     break;
+                case 5:
+                    Islemler.KayitAra();
+                    break;
                 case 6:
                     Console.Clear();
                     break;
