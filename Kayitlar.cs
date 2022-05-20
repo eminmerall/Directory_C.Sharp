@@ -25,11 +25,6 @@ namespace C__Directory
             Kayitlar.Ekle(kayit5);
         }
 
-        static public bool Yukle()
-        {
-            return kayitListe.Count >0;
-        }
-
         static public void Ekle(KayitVarlik p)
         {
             kayitListe.Add(p);

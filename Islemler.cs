@@ -6,7 +6,7 @@ namespace C__Directory
     {
         static public void KayitOlustur()
         {
-            string ad = Giris.StringGiris("Adı");
+            string ad = Giris.StringGiris("Adı"); 
             string soyad = Giris.StringGiris("Soyadı");
             string numara = Giris.StringGiris("Telefon");
 
@@ -15,10 +15,13 @@ namespace C__Directory
 
         static public void KayitListele()
         {
-            Console.WriteLine("Kayıtlar:");
+            Console.Clear();
+            Console.WriteLine("Telefon Rehberi \n");
+            Console.WriteLine("********************************************** \n");
             foreach (var item in Kayitlar.kayitListe)
             {
-                Console.WriteLine("-- " + item.Adi + " \t| " + item.Soyadi + " \t| " + item.Telefon);
+                Console.WriteLine("Adı: {0} \nSoyadı: {1} \nNumarası: {2}",item.Adi,item.Soyadi,item.Telefon);
+                Console.WriteLine("--");
             }
         }
 
