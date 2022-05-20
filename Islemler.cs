@@ -27,7 +27,7 @@ namespace C__Directory
 
         static public bool KayitSil()
         {
-            string girdi = Giris.StringGiris("Silincek Kullanıcı Adı veya Soyadı: ");
+            string girdi = Giris.StringGiris("Silincek Kullanıcının Adı veya Soyadı: ");
             int konum = KayitVarMi(girdi);
             if(konum == -1)
             {
@@ -39,6 +39,23 @@ namespace C__Directory
             Kayitİslemleri.Sil(kayit);
             return true;
 
+        }
+
+        static public bool KayitGuncelle()
+        {
+            string girdi = Giris.StringGiris("Güncellenecek kaydın adı veya soyadı");
+            int konum = KayitVarMi(girdi);
+            if(konum==-1)
+            {
+                return false;
+            }
+
+            string ad = Giris.StringGiris("Yeni sdı girin: ");
+            string soyad = Giris.StringGiris("Yeni soyadı girin: ");
+            string numara = Giris.StringGiris("Yeni telefonu girin: ");
+
+            Kayitİslemleri.Guncelle(new KayitVarlik((ad, soyad, numara)),konum);
+            return true;
         }
         
         static private int KayitVarMi(string girdi)
@@ -52,6 +69,7 @@ namespace C__Directory
             }
             Console.WriteLine("\n {0} bulunamadı \n",girdi);
             return -1;
-        }   
+        }
+           
     }
 }

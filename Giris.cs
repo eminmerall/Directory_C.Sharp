@@ -35,6 +35,9 @@ namespace C__Directory
                 case 2:
                     Islemler.KayitSil();
                     break;
+                case 3:
+                    Islemler.KayitGuncelle();
+                    break;
                 case 4:
                     Islemler.KayitListele();
                     break;

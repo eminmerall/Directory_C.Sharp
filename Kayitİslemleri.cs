@@ -17,5 +17,10 @@ namespace C__Directory
                 Kayitlar.kayitListe.Remove(p);
             }
         }
+
+        static public void Guncelle(KayitVarlik p, int konum)
+        {
+            Kayitlar.kayitListe[konum] = p;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace C__Directory
         {
             Console.WriteLine("\n Aşağıdaki İşlemleri Yapabilirsiniz!\n"); // \n bir satır boşluk bırakır.
             
-            Console.WriteLine("[1] Yeni Kayıt Oluşur \n[2] Kayıt Sil \n[4]Kayıtları Listele \n[6] Ekranı Temizle");
+            Console.WriteLine("[1] Yeni Kayıt Oluşur \n[2] Kayıt Sil \n[3] Kayıt Güncelle \n[4]Kayıtları Listele \n[6] Ekranı Temizle");
 
         }
         
