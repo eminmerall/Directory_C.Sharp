@@ -18,16 +18,13 @@ namespace C__Directory
             KayitVarlik kayit4 = new KayitVarlik(("Ebru", "Arslan", "135"));
             KayitVarlik kayit5 = new KayitVarlik(("Emin", "Meral","246"));
 
-            Kayitlar.Ekle(kayit1); 
-            Kayitlar.Ekle(kayit2);
-            Kayitlar.Ekle(kayit3);
-            Kayitlar.Ekle(kayit4);
-            Kayitlar.Ekle(kayit5);
+            Kayitİslemleri.Ekle(kayit1); 
+            Kayitİslemleri.Ekle(kayit2);
+            Kayitİslemleri.Ekle(kayit3);
+            Kayitİslemleri.Ekle(kayit4);
+            Kayitİslemleri.Ekle(kayit5);
         }
 
-        static public void Ekle(KayitVarlik p)
-        {
-            kayitListe.Add(p);
-        }
+        
     }
 }

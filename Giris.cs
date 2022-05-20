@@ -33,9 +33,12 @@ namespace C__Directory
                     Islemler.KayitOlustur();
                     break;
                 case 2:
+                    Islemler.KayitSil();
+                    break;
+                case 4:
                     Islemler.KayitListele();
                     break;
-                case 3:
+                case 6:
                     Console.Clear();
                     break;
             }
