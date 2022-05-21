@@ -101,13 +101,13 @@ namespace C__Directory
                 }
                 Console.WriteLine("Lütfen Geçerli Bir Cevap Girin!");
             }
-
+            
             int konum = KayitVarMi(ara);
             if(konum==-1)
             {
                 return false;
             }
-            
+
             KayitVarlik kayit = Kayitlar.kayitListe[KayitVarMi(ara)];
             Console.WriteLine("\nAranan Kullanıcı: ");
             Console.WriteLine("Adı: {0} \nSoyadı: {1} \nTelefonu:{2}", kayit.Adi, kayit.Soyadi, kayit.Telefon);
