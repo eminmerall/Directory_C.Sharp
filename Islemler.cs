@@ -13,7 +13,7 @@ namespace C__Directory
                     return Kayitlar.kayitListe.IndexOf(kayit);
                 }
             }
-            Console.WriteLine("\n {0} bulunamadı \n",girdi);
+            Console.WriteLine("\n{0} bulunamadı \n",girdi);
             return -1;
         }
 
@@ -52,7 +52,6 @@ namespace C__Directory
             KayitVarlik kayit = Kayitlar.kayitListe[konum];
             Console.WriteLine($"\nSilinecek Kayıt: {kayit.Adi} {kayit.Soyadi} {kayit.Telefon} ");
             Kayitİslemleri.Sil(kayit);
-            Console.WriteLine("\nKayıt Silindi!");
             return true;
 
         }
@@ -75,7 +74,6 @@ namespace C__Directory
             string numara = Giris.StringGiris("Yeni telefonu girin: ");
 
             Kayitİslemleri.Guncelle(new KayitVarlik((ad, soyad, numara)),konum);
-            Console.WriteLine("\nKayıt Güncellendi");
             return true;
         }
 
@@ -104,8 +102,13 @@ namespace C__Directory
                 Console.WriteLine("Lütfen Geçerli Bir Cevap Girin!");
             }
 
+            int konum = KayitVarMi(ara);
+            if(konum==-1)
+            {
+                return false;
+            }
+            
             KayitVarlik kayit = Kayitlar.kayitListe[KayitVarMi(ara)];
-
             Console.WriteLine("\nAranan Kullanıcı: ");
             Console.WriteLine("Adı: {0} \nSoyadı: {1} \nTelefonu:{2}", kayit.Adi, kayit.Soyadi, kayit.Telefon);
             return true;

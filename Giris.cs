@@ -55,6 +55,6 @@ namespace C__Directory
             Console.Write(mesaj+": "); //mesaj değişkeni, MenuGiris metodundan geliyor, : mesajdan sonra ekleniyor.
             return Console.ReadLine();
         }
-    }
 
+    }
 }
