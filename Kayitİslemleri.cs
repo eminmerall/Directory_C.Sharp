@@ -12,10 +12,9 @@ namespace C__Directory
 
         static public void Sil(KayitVarlik p)
         {
-            if(Giris.StringGiris($"{p.Adi} siliniyor emin misiniz? Evet = 1").ToLower() == "1")
+            if(Giris.StringGiris($"{p.Adi} siliniyor emin misiniz? Evet = 1") == "1")
             {
                 Kayitlar.kayitListe.Remove(p);
-                Console.WriteLine("\nKayıt Silindi!");
             }
             else
                 Console.WriteLine("\nİşlem İptal Edildi");
@@ -23,10 +22,9 @@ namespace C__Directory
 
         static public void Guncelle(KayitVarlik p, int konum)
         {
-            if(Giris.StringGiris("Kayıt güncellenecek emin misiniz? Evet = 1").ToLower() == "1")
+            if(Giris.StringGiris("Kayıt güncellenecek emin misiniz? Evet = 1") == "1")
             {
                 Kayitlar.kayitListe[konum] = p;
-                Console.WriteLine("\nKayıt Güncellendi!");
             }
             else
                 Console.WriteLine("\nİşlem İptal Edildi");

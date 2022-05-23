@@ -20,18 +20,31 @@ namespace C__Directory
         static public void KayitOlustur()
         {
             Console.Clear();
+            Console.WriteLine("Yeni Oluşturulacak Kaydın; \n");
             string ad = Giris.StringGiris("Adı"); 
             string soyad = Giris.StringGiris("Soyadı");
             string numara = Giris.StringGiris("Telefon");
 
             Kayitİslemleri.Ekle(new KayitVarlik((ad, soyad, numara)));
+            Console.WriteLine("\nKayıt Oluşturuldu");
         }
 
         static public void KayitListele()
         {
             Console.Clear();
+            int girdi = Giris.IntGiris("\nSıralama \n[1] A -> Z \n[2] Z -> A \nYapacağınız İşlem");
+            if(girdi == 1)
+            {
+                Kayitlar.kayitListe.Sort((x,y) => string.Compare(x.Adi,y.Adi));
+            }
+            if(girdi == 2)
+            {
+                Kayitlar.kayitListe.Sort((x,y) => string.Compare(x.Adi,y.Adi));
+                Kayitlar.kayitListe.Reverse();
+            }
             Console.WriteLine("Telefon Rehberi \n");
             Console.WriteLine("********************************************** \n");
+
             foreach (var item in Kayitlar.kayitListe)
             {
                 Console.WriteLine("Adı: {0} \nSoyadı: {1} \nNumarası: {2}",item.Adi,item.Soyadi,item.Telefon);
@@ -41,7 +54,7 @@ namespace C__Directory
 
         static public bool KayitSil()
         {
-            string girdi = Giris.StringGiris("Silincek Kullanıcının Adı veya Soyadı: ");
+            string girdi = Giris.StringGiris("\nSilincek Kullanıcının Adı veya Soyadı");
             int konum = KayitVarMi(girdi);
             if(konum == -1)
             {
@@ -52,6 +65,7 @@ namespace C__Directory
             KayitVarlik kayit = Kayitlar.kayitListe[konum];
             Console.WriteLine($"\nSilinecek Kayıt: {kayit.Adi} {kayit.Soyadi} {kayit.Telefon} ");
             Kayitİslemleri.Sil(kayit);
+            Console.WriteLine("\nKayıt Silindi!");
             return true;
 
         }
@@ -74,6 +88,7 @@ namespace C__Directory
             string numara = Giris.StringGiris("Yeni telefonu girin: ");
 
             Kayitİslemleri.Guncelle(new KayitVarlik((ad, soyad, numara)),konum);
+            Console.WriteLine("\nKayıt Güncellendi!");
             return true;
         }
 
@@ -83,7 +98,7 @@ namespace C__Directory
             string ara = "";
             while (true)
             {
-                int girdi = Giris.IntGiris("[1] Ada Göre Ara \n[2] Soyada Göre Ara \n[3] İşlemi İptal Et \nYapacağınız İşlem: ");
+                int girdi = Giris.IntGiris("[1] Ada Göre Ara \n[2] Soyada Göre Ara \n[3] İşlemi İptal Et \nYapacağınız İşlem");
 
                 if(girdi==1)
                 {
