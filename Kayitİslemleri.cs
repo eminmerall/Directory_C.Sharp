@@ -10,24 +10,44 @@ namespace C__Directory
             Kayitlar.kayitListe.Add(p);
         }
 
-        static public void Sil(KayitVarlik p)
+        static public bool Sil(KayitVarlik p)
         {
-            if(Giris.StringGiris($"{p.Adi} siliniyor emin misiniz? Evet = 1") == "1")
+            while(true)
             {
-                Kayitlar.kayitListe.Remove(p);
+                int onay = Giris.IntGiris("\nayıt siliniyor emin misiniz? Onayla = 1, İptal = 2");
+                if(onay==1)
+                {
+                    Kayitlar.kayitListe.Remove(p);
+                    Console.WriteLine("\nKayıt silindi!");
+                    return true;
+                }
+                else if(onay==2)
+                {
+                    Console.WriteLine("\nİşlem iptal edildi");
+                    return true;
+                }
+                Console.WriteLine("\nLütfen geçerli bir cevap girin!");
             }
-            else
-                Console.WriteLine("\nİşlem İptal Edildi");
         }
 
-        static public void Guncelle(KayitVarlik p, int konum)
+        static public bool Guncelle(KayitVarlik p, int konum)
         {
-            if(Giris.StringGiris("Kayıt güncellenecek emin misiniz? Evet = 1") == "1")
+            int onay = Giris.IntGiris("Kayıt güncellenecek emin misiniz? Evet = 1, İptal =2");
+            while(true)
             {
-                Kayitlar.kayitListe[konum] = p;
+                if(onay == 1)
+                {
+                    Kayitlar.kayitListe[konum] = p;
+                    Console.WriteLine("\nKayıt Güncellendi!");
+                    return true;
+                }
+                else if(onay==2)
+                {
+                    Console.WriteLine("\nİşlem İptal Edildi");
+                    return true;
+                }                    
+                Console.WriteLine("\nLütfen geçerli bir cevap girin!");
             }
-            else
-                Console.WriteLine("\nİşlem İptal Edildi");
         }
     }
 }

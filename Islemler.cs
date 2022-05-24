@@ -65,14 +65,13 @@ namespace C__Directory
             KayitVarlik kayit = Kayitlar.kayitListe[konum];
             Console.WriteLine($"\nSilinecek Kayıt: {kayit.Adi} {kayit.Soyadi} {kayit.Telefon} ");
             Kayitİslemleri.Sil(kayit);
-            Console.WriteLine("\nKayıt Silindi!");
             return true;
 
         }
 
         static public bool KayitGuncelle()
         {
-            string girdi = Giris.StringGiris("Güncellenecek kaydın adı veya soyadı");
+            string girdi = Giris.StringGiris("\nGüncellenecek kaydın adı veya soyadı");
             int konum = KayitVarMi(girdi);
             if(konum==-1)
             {
@@ -88,7 +87,6 @@ namespace C__Directory
             string numara = Giris.StringGiris("Yeni telefonu girin: ");
 
             Kayitİslemleri.Guncelle(new KayitVarlik((ad, soyad, numara)),konum);
-            Console.WriteLine("\nKayıt Güncellendi!");
             return true;
         }
 

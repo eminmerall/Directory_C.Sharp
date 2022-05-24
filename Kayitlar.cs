@@ -23,8 +23,6 @@ namespace C__Directory
             Kayitİslemleri.Ekle(kayit3);
             Kayitİslemleri.Ekle(kayit4);
             Kayitİslemleri.Ekle(kayit5);
-        }
-
-        
+        }       
     }
 }
